@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Content Ops & Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const translations = {
+            'zh-CN': {
+                nav: ['首页', '内容运营', '作品切片', '标题文案库', '科研项目', '联系我'],
+                h1: '内容运营与数字传播',
+                sub: '翻译硕士 | 内容创作者 | AI 驱动工作流',
+                h2_work: '小红书内容运营实践',
+                h3_strategy: '内容策略与表达方式',
+                h3_iteration: '内容迭代与观察',
+                h3_data: '数据表现',
+                h3_tools: '工具与方法辅助',
+                strategy_desc: '以生活方式内容为主，从日常分享出发，逐步形成稳定的图文表达方式。内容呈现以单图+场景化组合为主，通过弱商业化表达增强真实感，例如：',
+                strategy_items: ['使用简洁标题与低信息噪音文案', '以产品与生活场景的自然组合呈现内容', '通过视觉元素（如白线标注）建立轻引导关系', '标签以内容相关性为主，减少冗余品牌标签', '加入日常音乐元素增强情绪氛围'],
+                strategy_note: '整体形成偏“低压力阅读”的内容风格。',
+                iteration_desc: '在内容发布过程中逐步形成对用户偏好的基础观察：',
+                iteration_items: ['用户更倾向于“实用型+真实感”的内容表达', '单图结构内容在生活方式类主题中表现更稳定', '场景化表达（如收纳、日常物品）更容易形成长尾流量', '发布时间对流量存在影响，晚间时段表现更优', '通过持续发布与观察，对内容结构进行了轻度优化与调整。'],
+                data_items: ['累计运营内容：270+篇', '总互动量：1.3w+点赞与收藏', '单篇最高互动：1000+（日化收纳类内容）', '日常类内容保持持续稳定反馈'],
+                tools_desc: '使用 AI 工具进行内容复盘与优化，包括：',
+                tools_items: ['内容表现分析与趋势总结', '选题方向建议', '文案表达优化与结构调整参考'],
+                tools_note: '在持续发布过程中形成“观察—输出—复盘”的轻量迭代模式。',
+                h3_gallery: '作品切片',
+                media_btn: '浏览其他自媒体创作经验 →',
+                gallery_btn: '浏览摄影作品集 →',
+                cat_cons: '消费 · 审美生活',
+                cat_daily: '日常 · 生活定格与动态',
+                cat_travel: '旅行 · 城市切片',
+                gallery_items: {
+                    cons: ['喜欢用的和习惯用的', '笔袋里', '酒店学习法', '一好背包'],
+                    daily: ['喜欢解决问题的过程', '气场不对了就收拾清理'],
+                    travel: ['咸阳3小时，老街走一走', '赴个约｜和朋友在一起的西安10小时']
+                },
+                daily_link: '视频链接',
+                h2_thoughts: '标题文案库',
+                thoughts_items: ['接受自己 提醒自己', '学会离开 学会回来', '我还能感受 这重要', '主动接受 主动改变', '训练感知时间的能力', '心再乱也只是几个瞬间', '一切都会过去 稳住', '提升不了就稳住', '专注做事 平静在场', '冬天是春启的前夜', '接受失控 训练可控', '解决完问题痛苦就会消散', '怀疑意义也有意义', '相信自己的自愈能力', '让一切自然流动', '夜晚用来缝补', '不要让生活长期处于无序状态', '喜欢用的和习惯用的', '任务收尾的时候有种平静的疯感'],
+                tag_title: '常用Tag',
+                tag_name: '#继续往前走',
+                h2_research: '跨文化语料研究：从实地采集到多模态语料库搭建',
+                h3_research: '校级科研项目负责人 · 西藏公示语双语语料研究（2024–2026）',
+                research_desc: '基于西藏公示语的双语语料研究，结合实地调研数据进行多模态语料整理与分析。',
+                work_content: '工作内容：',
+                work_items: ['赴拉萨、林芝开展实地语料采集', '收集并整理双语公示语图像与文本资料', '对多模态语料进行清洗、标注与分类整理', '参与项目推进及阶段性材料整理'],
+                research_res: '研究成果：',
+                research_items: ['校级学术论坛二等奖（论文成果）', '校级优秀调研成果奖', '完成约2万字研究报告', '项目按期结项（2026年）'],
+                corpus_tag: '语料整理 · 信息分类 · 基础结构化表达',
+                corpus_btn: '访问语料库链接',
+                h2_contact: '让观察沉淀为故事，让想法生长为行动。',
+                email: '2360194828@qq.com'
+            },
+            'en': {
+                nav: ['INTRO', 'Content Insights', 'Selected Works', 'Headline Collection', 'Research', 'Contact'],
+                h1: 'Content Operations & Digital Communication',
+                sub: 'MTI  | Content Creator | AI-assisted Workflow',
+                h2_work: 'Xiaohongshu Content Operations Practice',
+                h3_strategy: 'Content Strategy & Expression',
+                h3_iteration: 'Iteration & Observation',
+                h3_data: 'Performance Data',
+                h3_tools: 'Tools & Methodology',
+                strategy_desc: 'Focusing on lifestyle content, starting from daily sharing, gradually forming a stable graphic expression style. Content is mainly presented in single-image + scene combinations, enhancing authenticity through weak commercial expression, for example:',
+                strategy_items: ['Use concise titles and low-noise copywriting', 'Present content through a natural combination of products and life scenes', 'Establish light guidance through visual elements (e.g., white line annotations)', 'Tags are based on content relevance, reducing redundant brand tags', 'Incorporate daily music elements to enhance emotional atmosphere'],
+                strategy_note: 'Overall forming a "low-pressure reading" content style.',
+                iteration_desc: 'Gradually formed basic observations on user preferences during the content publishing process:',
+                iteration_items: ['Users prefer "practical + authentic" content expression', 'Single-image structured content performs more stably in lifestyle topics', 'Scenario-based expression (e.g., storage, daily items) is easier to form long-tail traffic', 'Publishing time affects traffic, with evening slots performing better', 'Through continuous publishing and observation, the content structure has been slightly optimized and adjusted.'],
+                data_items: ['Total content managed: 270+', 'Total engagement: 13k+ likes and collections', 'Highest engagement per post: 1000+ (daily chemical storage content)', 'Daily content maintains stable feedback'],
+                tools_desc: 'Use AI tools for content review and optimization, including:',
+                tools_items: ['Content performance analysis and trend summary', 'Topic direction suggestions', 'Copywriting optimization and structural adjustment references'],
+                tools_note: 'Forming a "Observe-Output-Review" lightweight iteration mode during the continuous publishing process.',
+                h3_gallery: 'Selected Works',
+                media_btn: 'Explore Other Social Media Experience →',
+                gallery_btn: 'Explore Photo Gallery →',
+                cat_cons: 'Consumption · Aesthetic Living',
+                cat_daily: 'Daily · Life Stills',
+                cat_travel: 'Travel · City Slices',
+                gallery_items: {
+                    cons: ['Favorites & Familiarities', 'Inside My Pencil Case', 'Hotel Study Method', 'One Good Backpack'],
+                    daily: ['The Joy of Solving Problems', 'Reset Through Tidying'],
+                    travel: ['A Walk Through Xianyang’s Old Streets', 'Ten Hours in Xi’an with Friends']
+                },
+                daily_link: 'Video Link',
+                h2_thoughts: 'Headline Collection',
+                thoughts_items: ['Self Acceptance / Self Reminder', 'Leave & Return', 'Still Feeling', 'Active Acceptance / Change', 'Time Awareness', 'Moments Only', 'This Too Passes', 'Stabilize', 'Focus & Presence', 'Winter Before Spring', 'Control & Release', 'Pain Fades After Fix', 'Doubt Has Meaning', 'Self Healing', 'Let It Flow', 'Night Repair', 'Avoid Disorder', 'Preference & Habit', 'Calm Chaos'],
+                tag_title: 'Common Tags',
+                tag_name: '#Still Moving',
+                h2_research: 'Cross-Cultural Corpus Research: From Field Collection to Multimodal Corpus Construction',
+                h3_research: 'Principal Investigator · Bilingual Corpus Research on Public Signs in Tibet (2024–2026)',
+                research_desc: 'Based on bilingual corpus research of public signs in Tibet, combined with field survey data for multimodal corpus organization and analysis.',
+                work_content: 'Work Content:',
+                work_items: ['Field corpus collection in Lhasa and Nyingchi', 'Collect and organize bilingual public sign images and text data', 'Clean, annotate, and classify multimodal corpus', 'Participate in project promotion and phased material organization'],
+                research_res: 'Research Achievements:',
+                research_items: ['Second Prize of University Academic Forum (Thesis)', 'University Excellent Research Achievement Award', 'Completed a research report of about 20,000 words', 'Project completion on schedule (2026)'],
+                corpus_tag: 'Corpus Organization · Info Classification · Basic Structured Expression',
+                corpus_btn: 'Corpus Access',
+                h2_contact: 'Turning observations into stories, and ideas into action.',
+                email: '2360194828@qq.com'
+            }
+        };
+
+        function toggleLang() {
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'zh-CN' ? 'en' : 'zh-CN';
+            document.documentElement.lang = newLang;
+            const data = translations[newLang];
+
+            // 1. 导航翻译（安全检查）
+            const navLinks = document.querySelectorAll('nav a');
+            data.nav.forEach((text, i) => { if(navLinks[i]) navLinks[i].innerText = text; });
+            
+            // 2. 标题翻译（安全检查）
+            const h1 = document.querySelector('h1');
+            if (h1) h1.innerText = data.h1;
+            
+            const sub = document.querySelector('header p.font-medium');
+            if (sub) sub.innerText = data.sub;
+                        
+            // 3. 小红书运营实践板块（安全检查）
+            const workH2 = document.querySelector('#work h2');
+            if (workH2) workH2.innerText = data.h2_work;
+            
+            const workH3s = document.querySelectorAll('#work h3');
+            workH3s.forEach((h3, i) => { 
+                if(h3 && i < 4) {
+                    h3.style.color = '#7A5533'; 
+                    h3.innerText = [data.h3_strategy, data.h3_iteration, data.h3_data, data.h3_tools][i]; 
+                }
+            });
+
+            const workPs = document.querySelectorAll('#work p.text-gray-600');
+            if (workPs[0]) workPs[0].innerText = data.strategy_desc;
+            if (workPs[1]) workPs[1].innerText = data.strategy_note;
+            if (workPs[2]) workPs[2].innerText = data.iteration_desc;
+            if (workPs[3]) workPs[3].innerText = data.tools_desc;
+            if (workPs[4]) workPs[4].innerText = data.tools_note;
+
+            const workUls = document.querySelectorAll('#work ul');
+            if (workUls[0]) data.strategy_items.forEach((text, i) => { if (workUls[0].children[i]) workUls[0].children[i].innerText = text; });
+            if (workUls[1]) data.iteration_items.forEach((text, i) => { if (workUls[1].children[i]) workUls[1].children[i].innerText = text; });
+            if (workUls[2]) {
+                data.data_items.forEach((text, i) => { 
+                    if (!workUls[2].children[i]) {
+                        const li = document.createElement('li');
+                        li.innerText = text;
+                        workUls[2].appendChild(li);
+                    } else {
+                        workUls[2].children[i].innerText = text; 
+                    }
+                });
+            }
+            if (workUls[3]) data.tools_items.forEach((text, i) => { if (workUls[3].children[i]) workUls[3].children[i].innerText = text; });
+                        
+            // 4. 作品切片与跳转按钮（安全检查，解决切换后文字不显示的Bug）
+            const galleryH3 = document.querySelector('#gallery h3');
+            if (galleryH3) galleryH3.innerText = data.h3_gallery;
+            
+            const mediaBtn = document.getElementById('media-btn');
+            if (mediaBtn) mediaBtn.innerText = data.media_btn;
+
+            const galleryBtn = document.getElementById('gallery-btn');
+            if (galleryBtn) galleryBtn.innerText = data.gallery_btn;
+
+            const catH4s = document.querySelectorAll('#gallery h4');
+            if (catH4s[0]) catH4s[0].innerText = data.cat_cons;
+            if (catH4s[1]) catH4s[1].innerText = data.cat_daily;
+            if (catH4s[2]) catH4s[2].innerText = data.cat_travel;
+
+            const items = document.querySelectorAll('.gallery-item-text');
+            const keys = [...data.gallery_items.cons, ...data.gallery_items.daily, ...data.gallery_items.travel];
+            items.forEach((el, i) => { if (el) el.innerText = keys[i]; });
+
+            document.querySelectorAll('.daily-link').forEach(el => { if (el) el.innerText = data.daily_link; });
+                        
+            // 5. 标题文案库板块（安全检查）
+            const thoughtsH2 = document.querySelector('#thoughts h2');
+            if (thoughtsH2) thoughtsH2.innerText = data.h2_thoughts;
+            
+            const thoughtItems = document.querySelectorAll('#thought-list span');
+            data.thoughts_items.forEach((text, i) => { if (thoughtItems[i]) thoughtItems[i].innerText = text; });
+            
+            const tagTitle = document.querySelector('#tag-title');
+            if (tagTitle) tagTitle.innerText = data.tag_title;
+            
+            const tagName = document.querySelector('#tag-name');
+            if (tagName) tagName.innerText = data.tag_name;
+                        
+            // 6. 科研项目板块（安全检查 + 修复了 h3_research 绑定 Bug 👈）
+            const researchH2 = document.querySelector('#research h2');
+            if (researchH2) researchH2.innerText = data.h2_research;
+            
+            const researchH3 = document.querySelector('#research h3');
+            if (researchH3) researchH3.innerText = data.h3_research;
+            
+            const researchDesc = document.querySelector('#research_desc');
+            if (researchDesc) researchDesc.innerText = data.research_desc;
+            
+            const corpusTag = document.querySelector('#corpus_tag');
+            if (corpusTag) corpusTag.innerText = data.corpus_tag;
+            
+            const corpusBtn = document.querySelector('#corpus_btn');
+            if (corpusBtn) corpusBtn.innerText = data.corpus_btn;
+                        
+            const researchDivs = document.querySelectorAll('#research strong');
+            if (researchDivs[0]) researchDivs[0].innerText = data.work_content;
+            if (researchDivs[1]) researchDivs[1].innerText = data.research_res;
+                        
+            const researchUls = document.querySelectorAll('#research ul');
+            if (researchUls[0]) data.work_items.forEach((text, i) => { if (researchUls[0].children[i]) researchUls[0].children[i].innerText = text; });
+            if (researchUls[1]) data.research_items.forEach((text, i) => { if (researchUls[1].children[i]) researchUls[1].children[i].innerText = text; });
+                        
+            // 7. 联系我板块（安全检查）
+            const contactH2 = document.querySelector('#contact h2');
+            if (contactH2) contactH2.innerText = data.h2_contact;
+            
+            const contactA = document.querySelector('#contact a');
+            if (contactA) contactA.innerText = data.email;
+
+            const langBtn = document.getElementById('lang-btn');
+            if (langBtn) langBtn.innerText = newLang === 'zh-CN' ? 'EN' : '中';
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 font-sans leading-relaxed">
+
+    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <div class="text-xl font-bold text-[#7A5533]">Lia | Portfolio</div>
+        <div class="flex items-center space-x-8 text-sm uppercase tracking-widest text-gray-500">
+            <a href="#" class="hover:text-[#7A5533]">首页</a>
+            <a href="#work" class="hover:text-[#7A5533]">内容运营</a>
+            <a href="#gallery" class="hover:text-[#7A5533]">作品切片</a>
+            <a href="#thoughts" class="hover:text-[#7A5533]">标题文案库</a>
+            <a href="#research" class="hover:text-[#7A5533]">科研项目</a>
+            <a href="#contact" class="hover:text-[#7A5533]">联系我</a>
+            <button id="lang-btn" onclick="toggleLang()" class="font-bold text-[#7A5533] border border-[#7A5533] px-2 py-1 rounded hover:bg-[#7A5533] hover:text-white transition">EN</button>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+            <h1 class="text-4xl font-bold mb-4 whitespace-nowrap">内容运营与数字传播</h1>
+            <p class="text-xl text-[#7A5533] mb-6 font-medium">翻译硕士 | 内容创作者 | AI 驱动工作流</p>
+        </div>
+        <div class="md:w-1/2 flex justify-end">
+            <img src="avatar.jpg" alt="头像" class="h-[480px] w-[320px] object-cover rounded-2xl">
+        </div>
+    </header>
+
+    <section id="work" class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-2xl font-bold mb-12 pl-0">小红书内容运营实践</h2>
+        <div class="grid md:grid-cols-2 gap-8 text-sm">
+            <div class="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold mb-3 text-[#7A5533]">内容策略与表达方式</h3>
+                <p class="text-gray-600 mb-2 leading-relaxed">以生活方式内容为主，从日常分享出发，逐步形成稳定的图文表达方式。内容呈现以单图+场景化组合为主，通过弱商业化表达增强真实感，例如：</p>
+                <ul class="list-disc list-inside text-gray-500 space-y-1">
+                    <li>使用简洁标题与低信息噪音文案</li>
+                    <li>以产品与生活场景的自然组合呈现内容</li>
+                    <li>通过视觉元素（如白线标注）建立轻引导关系</li>
+                    <li>标签以内容相关性为主，减少冗余品牌标签</li>
+                    <li>加入日常音乐元素增强情绪氛围</li>
+                </ul>
+                <p class="text-gray-600 mt-2">整体形成偏“低压力阅读”的内容风格。</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold mb-3 text-[#7A5533]">内容迭代与观察</h3>
+                <p class="text-gray-600 mb-2 leading-relaxed">在内容发布过程中逐步形成对用户偏好的基础观察：</p>
+                <ul class="list-disc list-inside text-gray-500 space-y-1">
+                    <li>用户更倾向于“实用型+真实感”的内容表达</li>
+                    <li>单图结构内容在生活方式类主题中表现更稳定</li>
+                    <li>场景化表达（如收纳、日常物品）更容易形成长尾流量</li>
+                    <li>发布时间对流量存在影响，晚间时段表现更优</li>
+                    <li>通过持续发布与观察，对内容结构进行了轻度优化与调整。</li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold mb-3 text-[#7A5533]">数据表现</h3>
+                <ul class="list-disc list-inside text-gray-500 space-y-1 mb-3">
+                    <li>累计运营内容：270+篇</li>
+                    <li>总互动量：1.3w+点赞与收藏</li>
+                    <li>单篇最高互动：1000+（日化收纳类内容）</li>
+                    <li>日常类内容保持持续稳定反馈</li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold mb-3 text-[#7A5533]">工具与方法辅助</h3>
+                <p class="text-gray-600 leading-relaxed mb-3">使用 AI 工具进行内容复盘与优化，包括：</p>                <ul class="list-disc list-inside text-gray-500 space-y-1">
+                    <li>内容表现 analysis 与趋势总结</li>
+                    <li>选题方向建议</li>
+                    <li>文案表达优化与结构调整参考</li>
+                </ul>
+                <p class="text-gray-600 mt-3">在持续发布过程中形成“观察—输出—复盘”的轻量迭代模式。</p>
+            </div>
+        </div>
+
+        <!-- 完美移动到此：在小红书网格下方，作品切片（#gallery）之前 -->
+        <div class="text-center mt-12">
+            <a href="2.html" id="media-btn" class="inline-block border border-[#7A5533] text-[#7A5533] px-8 py-3 rounded-full text-sm tracking-wide hover:bg-[#7A5533] hover:text-white transition-all duration-300">
+                浏览其他自媒体创作经验 →
+            </a>
+        </div>
+    </section>
+
+    <section id="gallery" class="max-w-6xl mx-auto px-6 py-12">
+        <h3 class="text-2xl font-bold mb-12">作品切片</h3>
+        <div class="mb-16">
+            <h4 class="text-sm uppercase tracking-widest text-gray-400 mb-6 font-bold">消费 · 审美生活</h4>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+               <div class="w-full space-y-2">    <img src="Familiarities.jpg" alt="喜欢用的和习惯用的" class="aspect-[3/4] w-full object-cover rounded-lg">    <p class="gallery-item-text text-xs text-gray-500 italic text-center">喜欢用的和习惯用的</p></div>
+                <div class="w-full space-y-2">    <img src="Case.jpg" alt="笔袋" class="aspect-[3/4] w-full object-cover rounded-lg">        <p class="gallery-item-text text-xs text-gray-500 italic text-center">笔袋里</p></div>
+                <div class="w-full space-y-2">    <img src="Method.jpg" alt="酒店学习法" class="aspect-[3/4] w-full object-cover rounded-lg">    <p class="gallery-item-text text-xs text-gray-500 italic text-center">酒店学习法</p></div>
+              <div class="w-full space-y-2">    <img src="Backpack.jpg" alt="一好背包" class="aspect-[3/4] w-full object-cover rounded-lg">    <p class="gallery-item-text text-xs text-gray-500 italic text-center">一好背包</p></div>
+            </div>
+        </div>
+                
+        <div class="flex flex-col md:flex-row gap-12">
+            <div class="flex-1">
+                <h4 class="text-sm uppercase tracking-widest text-gray-400 mb-6 font-bold">日常 · 生活定格与动态</h4>
+                <div class="grid grid-cols-2 gap-6 justify-items-center mb-8">
+                   <div class="w-full space-y-2">        <img src="Problems.jpg" alt="解决问题" class="aspect-[3/4] w-full object-cover rounded-lg">        <p class="gallery-item-text text-xs text-gray-500 italic text-center">喜欢解决问题的过程</p>
+        <a href="https://www.xiaohongshu.com/search_result/69208fdd000000001b02710d?xsec_token=AB8E8ZuO3X9RvIvosehjjWl3s25QsjThT5KwN5jeYT_Ao=&xsec_source=" target="_blank" class="daily-link text-[10px] text-[#7A5533] block underline text-center">视频链接</a>
+    </div> 
+                 <div class="w-full space-y-2">        <img src="Tidying.jpg" alt="收纳整理" class="aspect-[3/4] w-full object-cover rounded-lg">        <p class="gallery-item-text text-xs text-gray-500 italic text-center">气场不对了就收拾清理</p>
+        <a href="https://www.xiaohongshu.com/search_result/6929bede000000001b022d48?xsec_token=ABLNdNHnV50WTIgd6SzQtR0wvG-yCJahMOnoiZWMZDqb8=&xsec_source=pc_search" target="_blank" class="daily-link text-[10px] text-[#7A5533] block underline text-center">视频链接</a>
+    </div></div>
+            </div>
+            <div class="flex-1">
+                <h4 class="text-sm uppercase tracking-widest text-gray-400 mb-6 font-bold">旅行 · 城市切片</h4>
+                <div class="grid grid-cols-2 gap-6 justify-items-center">
+                   <div class="w-full space-y-2">    <img src="Streets.jpg" alt="咸阳3小时 老街走一走" class="aspect-[3/4] w-full object-cover rounded-lg">    <p class="gallery-item-text text-xs text-gray-500 italic text-center">咸阳3小时 老街走一走</p></div>
+                  <div class="w-full space-y-2">    <img src="Friends.jpg" alt="赴个约｜和朋友在一起的西安10小时" class="aspect-[3/4] w-full object-cover rounded-lg">    <p class="gallery-item-text text-xs text-gray-500 italic text-center">赴个约｜和朋友在一起的西安10小时</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部只保留：浏览摄影作品集 按钮 -->
+        <div class="text-center mt-12 mb-16">
+            <a href="photography.html" id="gallery-btn" class="inline-block border border-[#7A5533] text-[#7A5533] px-8 py-3 rounded-full text-sm tracking-wide hover:bg-[#7A5533] hover:text-white transition-all duration-300">
+                浏览摄影作品集 →
+            </a>
+        </div>
+    </section>
+
+    <section id="thoughts" class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-2xl font-bold mb-12">标题文案库</h2>
+        <div id="thought-list" class="flex flex-wrap gap-x-6 gap-y-4 text-gray-700">
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">接受自己 提醒自己</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">学会离开 学会回来</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">我还能感受 这很重要</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">主动接受 主动改变</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">训练感知时间的能力</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">心再乱也只是几个瞬间</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">一切都会过去 稳住</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">提升不了就稳住</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">专注做事 平静在场</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">冬天是春启的前夜</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">接受失控 训练可控</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">解决完问题痛苦就会消散</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">怀疑意义也有意义</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">相信自己的自愈能力</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">让一切自然流动</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">夜晚用来缝补</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">不要让生活长期处于无序状态</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">喜欢用的和习惯用的</span>
+            <span class="bg-gray-100 px-3 py-1 rounded-md text-sm">任务收尾的时候有种平静的疯感</span>
+        </div>
+        <div class="mt-8">
+            <h4 id="tag-title" class="text-sm font-bold text-gray-500 mb-3 uppercase tracking-widest">常用Tag</h4>
+            <span id="tag-name" class="bg-[#7A5533] text-white px-3 py-1 rounded-md text-sm">#继续往前走</span>
+        </div>
+    </section>
+
+    <section id="research" class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-2xl font-bold mb-12">跨文化语料研究：从实地采集到多模态语料库搭建</h2>
+        <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/3 flex flex-col gap-4">
+                <img src="corpus.jpg" alt="语料库后台系统界面截图" class="h-64 w-full object-cover rounded-2xl">
+                <a id="corpus_btn" href="https://www.kdocs.cn/l/cafBXmuUoHrQ" target="_blank" class="block text-center bg-[#7A5533] text-white py-3 rounded-xl hover:bg-[#694a2d] transition">访问语料库链接</a>
+            </div>
+            <div class="md:w-2/3">
+                <h3 class="text-2xl font-bold mb-4">校级科研项目负责人 · 西藏公示语双语语料研究（2024–2026）</h3>
+                <div class="text-gray-600 leading-relaxed space-y-4">
+                    <p id="research_desc">基于西藏公示语的双语语料研究，结合实地调研 data 进行多模态语料整理与分析。</p>
+                    <div>
+                        <strong class="text-gray-800">工作内容：</strong>
+                        <ul class="list-disc list-inside ml-2">
+                            <li>赴拉萨、林芝开展实地语料采集</li>
+                            <li>收集并整理双语公示语图像与文本资料</li>
+                            <li>对多模态语料进行清洗、标注与分类整理</li>
+                            <li>参与项目推进及阶段性材料整理</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong class="text-gray-800">研究成果：</strong>
+                        <ul class="list-disc list-inside ml-2">
+                            <li>校级学术论坛二等奖（论文成果）</li>
+                            <li>校级优秀调研成果奖</li>
+                            <li>完成约2万字研究报告</li>
+                            <li>项目按期结项（2026年）</li>
+                        </ul>
+                    </div>
+                    <div class="pt-2">
+                        <span id="corpus_tag" class="inline-block bg-gray-100 px-3 py-1 rounded-md text-sm">语料整理 · 信息分类 · 基础结构化表达</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <div class="bg-[#1a1a1a] text-white py-16 px-6 rounded-3xl">
+            <h2 class="text-4xl font-bold mb-8">让观察沉淀为故事，让想法生长为行动。</h2>
+            <a href="mailto:2360194828@qq.com" class="text-2xl text-gray-300 border-b border-gray-500 hover:text-white pb-1">2360194828@qq.com</a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自媒体创作经验 | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+       const translations = {
+            'zh-CN': {
+                back: '← 返回主页',
+                title: '自媒体创作经验',
+                // 小红书
+                xhs_title: '小红书账号运营',
+                xhs_time: '2024年11月 —— 至今',
+                xhs_data: '<strong>数据表现：</strong>总赞藏 1.3w。',
+                xhs_content: '<strong>主要内容：</strong>包含好物分享（2个千赞图文）、日常vlog（日常+情绪文案，数个百赞）、旅行内容。',
+                xhs_exp: '<strong>经验总结：</strong>保持创作心态稳定；通过测试账号封面、发布时间及常用tag来寻求适合账号的发布规律；注重互动维系。',
+                // 知乎
+                zh_title: '知乎内容创作',
+                zh_time: '2023年 —— 2026年',
+                zh_flow: '<strong>写作流程：</strong>任务下达 —— 根据 brief 和产品进行实际测评与写作。',
+                zh_cat: '<strong>主要品类：</strong>',
+                zh_cat_1: '礼品类：电子类、日化、香氛、文创',
+                zh_cat_2: '家电类：冰箱、制冰机、跑步机',
+                // 公众号
+                mp_title: '微信公众号运营与创作',
+                mp_time: '2018年 —— 至今',
+                mp_p1: '<strong>2018年—2021年：</strong>负责班级官方公众号运营，独立承担内容撰写与排版工作。',
+                mp_p2: '<strong>2021年至今：</strong>进行个人公众号的内容创作与排版尝试（处于非连续状态）。',
+                // B站
+                b_title: 'B站视频创作',
+                b_time: '2020年6月 —— 2025年1月',
+                b_content: '<strong>主要内容：</strong>日常动态、影视混剪、学习资源创作与分享。',
+                // 微博
+                wb_title: '微博运营',
+                wb_time: '2020年',
+                wb_content: '曾作为情感博主进行内容运营，累计涨粉 5.3w（该账号现已转为个人私密账号）。',
+                // 底部
+                btn_back: '返回主页'
+            },
+            'en': {
+                back: '← Back to Home',
+                title: 'Social Media Creation Experience',
+                // 小红书 (Rednote)
+                xhs_title: 'Rednote Account Operations',
+                xhs_time: 'Nov 2024 —— Present',
+                xhs_data: '<strong>Performance:</strong> 13k+ total likes & collections.',
+                xhs_content: '<strong>Core Content:</strong> Product sharing (2 posts with 1k+ likes), daily vlogs (lifestyle + emotional copywriting, several posts with 100+ likes), and travel content.',
+                xhs_exp: '<strong>Key Takeaways:</strong> Maintain a stable mindset; test account covers, publishing times, and common tags to find the optimal publishing routine; focus on audience interaction.',
+                // 知乎
+                zh_title: 'Zhihu Content Creation',
+                zh_time: '2023 —— 2026',
+                zh_flow: '<strong>Workflow:</strong> Task assignment —— Conducting actual product testing and writing based on briefs and product features.',
+                zh_cat: '<strong>Product Categories:</strong>',
+                zh_cat_1: 'Gifts: Electronics, daily chemicals, fragrances, cultural & creative products',
+                zh_cat_2: 'Home Appliances: Refrigerators, ice makers, treadmills',
+                // 公众号
+                mp_title: 'WeChat Official Account Operations',
+                mp_time: '2018 —— Present',
+                mp_p1: '<strong>2018—2021:</strong> Responsible for class official account operations, independently handling content writing and layout design.',
+                mp_p2: '<strong>2021—Present:</strong> Explored personal account content creation and layout design (intermittent/non-continuous).',
+                // B站
+                b_title: 'Bilibili Video Creation',
+                b_time: 'June 2020 —— Jan 2025',
+                b_content: '<strong>Core Content:</strong> Daily life, film/TV montages, and learning resource creation & sharing.',
+                // 微博
+                wb_title: 'Weibo Operations',
+                wb_time: '2020',
+                wb_content: 'Operated as an emotional influencer, achieving a cumulative growth of 53k+ followers (the account has now been converted to a private personal account).',
+                // 底部
+                btn_back: 'Back to Home'
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            const data = translations[lang];
+            if (!data) return;
+
+            // 更新返回链接及头部标题
+            document.getElementById('back-link').innerText = data.back;
+            document.getElementById('page-title').innerText = data.title;
+
+            // 更新小红书/Rednote 字段
+            document.getElementById('xhs-title').innerText = data.xhs_title;
+            document.getElementById('xhs-time').innerText = data.xhs_time;
+            document.getElementById('xhs-data').innerHTML = data.xhs_data;
+            document.getElementById('xhs-content').innerHTML = data.xhs_content;
+            document.getElementById('xhs-exp').innerHTML = data.xhs_exp;
+
+            // 更新知乎字段
+            document.getElementById('zh-title').innerText = data.zh_title;
+            document.getElementById('zh-time').innerText = data.zh_time;
+            document.getElementById('zh-flow').innerHTML = data.zh_flow;
+            document.getElementById('zh-cat').innerHTML = data.zh_cat;
+            document.getElementById('zh-cat-1').innerText = data.zh_cat_1;
+            document.getElementById('zh-cat-2').innerText = data.zh_cat_2;
+
+            // 更新公众号字段
+            document.getElementById('mp-title').innerText = data.mp_title;
+            document.getElementById('mp-time').innerText = data.mp_time;
+            document.getElementById('mp-p1').innerHTML = data.mp_p1;
+            document.getElementById('mp-p2').innerHTML = data.mp_p2;
+
+            // 更新B站字段
+            document.getElementById('b-title').innerText = data.b_title;
+            document.getElementById('b-time').innerText = data.b_time;
+            document.getElementById('b-content').innerHTML = data.b_content;
+
+            // 更新微博字段
+            document.getElementById('wb-title').innerText = data.wb_title;
+            document.getElementById('wb-time').innerText = data.wb_time;
+            document.getElementById('wb-content').innerHTML = data.wb_content;
+
+            // 更新返回按钮与语言切换指示器
+            document.getElementById('back-btn').innerText = data.btn_back;
+            document.getElementById('lang-btn').innerText = lang === 'zh-CN' ? 'EN' : '中';
+
+            // 保存设置到本地存储
+            localStorage.setItem('portfolio_lang', lang);
+        }
+
+        function toggleLang() {
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'zh-CN' ? 'en' : 'zh-CN';
+            setLanguage(newLang);
+        }
+
+        // 页面加载完成后立即自动执行：检查本地存储的语言偏好
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('portfolio_lang') || 'zh-CN';
+            if (savedLang === 'en') {
+                setLanguage('en');
+            }
+        });
+    </script>
+</head>
+<body class="bg-white text-gray-800 font-sans leading-relaxed">
+
+    <!-- 返回及语言切换导航 -->
+    <nav class="max-w-3xl mx-auto px-6 py-12 flex justify-between items-center text-sm">
+        <a id="back-link" href="index.html" class="text-gray-400 hover:text-[#7A5533] transition-all">
+            ← 返回主页
+        </a>
+        <button id="lang-btn" onclick="toggleLang()" class="font-bold text-[#7A5533] border border-[#7A5533] px-2 py-1 rounded hover:bg-[#7A5533] hover:text-white transition">EN</button>
+    </nav>
+
+    <!-- 主容器 -->
+    <main class="max-w-3xl mx-auto px-6 pb-24">
+        
+        <!-- 头部 -->
+        <header class="mb-16">
+            <h1 id="page-title" class="text-2xl font-bold mb-2 text-gray-900">自媒体创作经验</h1>
+        </header>
+
+        <!-- 创作经历列表 -->
+        <div class="space-y-12 text-sm">
+            
+            <!-- 小红书板块 -->
+            <div class="relative pl-8 border-l border-gray-100">
+                <span class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-[#7A5533]"></span>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-3 gap-1">
+                    <h2 id="xhs-title" class="text-base font-bold text-gray-800">小红书账号运营</h2>
+                    <span id="xhs-time" class="text-xs font-mono text-gray-400">2024年11月 —— 至今</span>
+                </div>
+                <div class="text-gray-600 space-y-2">
+                    <p id="xhs-data"><strong>数据表现：</strong>总赞藏 1.3w。</p>
+                    <p id="xhs-content"><strong>主要内容：</strong>包含好物分享（2个千赞图文）、日常vlog（日常+情绪文案，数个百赞）、旅行内容。</p>
+                    <p id="xhs-exp"><strong>经验总结：</strong>保持创作心态稳定；通过测试账号封面、发布时间及常用tag来寻求适合账号的发布规律；注重互动维系。</p>
+                </div>
+            </div>
+
+            <!-- 知乎板块 -->
+            <div class="relative pl-8 border-l border-gray-100">
+                <span class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-[#7A5533]"></span>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-3 gap-1">
+                    <h2 id="zh-title" class="text-base font-bold text-gray-800">知乎内容创作</h2>
+                    <span id="zh-time" class="text-xs font-mono text-gray-400">2023年 —— 2026年</span>
+                </div>
+                <div class="text-gray-600 space-y-2">
+                    <p id="zh-flow"><strong>写作流程：</strong>任务下达 —— 根据 brief 和产品进行实际测评与写作。</p>
+                    <p id="zh-cat"><strong>主要品类：</strong></p>
+                    <ul class="list-disc list-inside pl-2 space-y-1 text-gray-500">
+                        <li id="zh-cat-1">礼品类：电子类、日化、香氛、文创</li>
+                        <li id="zh-cat-2">家电类：冰箱、制冰机、跑步机</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 微信公众号板块 -->
+            <div class="relative pl-8 border-l border-gray-100">
+                <span class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-[#7A5533]"></span>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-3 gap-1">
+                    <h2 id="mp-title" class="text-base font-bold text-gray-800">微信公众号运营与创作</h2>
+                    <span id="mp-time" class="text-xs font-mono text-gray-400">2018年 —— 至今</span>
+                </div>
+                <div class="text-gray-600 space-y-2">
+                    <p id="mp-p1"><strong>2018年—2021年：</strong>负责班级官方公众号运营，独立承担内容撰写与排版工作。</p>
+                    <p id="mp-p2"><strong>2021年至今：</strong>进行个人公众号的内容创作与排版尝试（处于非连续状态）。</p>
+                </div>
+            </div>
+
+            <!-- B站视频板块 -->
+            <div class="relative pl-8 border-l border-gray-100">
+                <span class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-[#7A5533]"></span>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-3 gap-1">
+                    <h2 id="b-title" class="text-base font-bold text-gray-800">B站视频创作</h2>
+                    <span id="b-time" class="text-xs font-mono text-gray-400">2020年6月 —— 2025年1月</span>
+                </div>
+                <div class="text-gray-600">
+                    <p id="b-content"><strong>主要内容：</strong>日常动态、影视混剪、学习资源创作与分享。</p>
+                </div>
+            </div>
+
+            <!-- 微博板块 -->
+            <div class="relative pl-8 border-l border-gray-100">
+                <span class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-[#7A5533]"></span>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-3 gap-1">
+                    <h2 id="wb-title" class="text-base font-bold text-gray-800">微博运营</h2>
+                    <span id="wb-time" class="text-xs font-mono text-gray-400">2020年</span>
+                </div>
+                <div class="text-gray-600">
+                    <p id="wb-content">曾作为情感博主进行内容运营，累计涨粉 5.3w（该账号现已转为个人私密账号）。</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 底部返回主页区域 -->
+        <footer class="mt-20 pt-12 border-t border-gray-100 text-center">
+            <a id="back-btn" href="index.html" class="inline-block border border-gray-200 text-gray-500 px-6 py-2 rounded-full hover:border-[#7A5533] hover:text-[#7A5533] transition-all duration-300">
+                返回主页
+            </a>
+        </footer>
+
+    </main>
+
+</body>
+</html>
