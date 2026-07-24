@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography - Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #faf8f5;
+            color: #2D3748;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <nav class="max-w-6xl mx-auto w-full px-6 py-8 flex justify-between items-center text-sm tracking-wide">
+        <a href="index.html" class="text-[#7A5533] hover:underline flex items-center gap-1 font-medium">
+            <span id="back-btn">← 返回首页 Index</span>
+        </a>
+        <button id="lang-btn" onclick="toggleLang()" class="border border-[#7A5533] text-[#7A5533] px-3 py-1 rounded-full text-xs hover:bg-[#7A5533] hover:text-white transition-colors cursor-pointer">
+            EN
+        </button>
+    </nav>
+
+    <main class="max-w-6xl mx-auto w-full px-6 py-6 flex-grow">
+        <header class="mb-16">
+            <h2 id="page-title" class="text-3xl font-bold tracking-tight mb-2">光影切片 · 摄影集</h2>
+            <p id="page-sub" class="text-sm text-gray-500 font-serif italic">“我还能感受，这很重要。”</p>
+        </header>
+
+        <section class="mb-20">
+            <div class="border-b border-gray-200 pb-2 mb-8">
+                <h3 class="text-xs uppercase tracking-widest text-[#7A5533] font-bold section-title" data-zh="捕捉光流动的瞬间" data-en="Captured Light">捕捉光流动的瞬间</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+                <div class="md:col-span-7">
+                    <img src="gaoyou1.jpg" alt="高邮日落" class="w-full rounded-lg shadow-xs hover:opacity-95 transition-opacity">
+                    <p class="text-xs text-gray-400 mt-2 italic img-desc" data-zh="高邮 · 湖畔的温柔暮色" data-en="Gaoyou · Gentle twilight by the lake">高邮 · 湖畔的温柔暮色</p>
+                </div>
+                <div class="md:col-span-5">
+                    <img src="shanghai.jpg" alt="上海全季酒店" class="w-full rounded-lg shadow-xs hover:opacity-95 transition-opacity">
+                    <p class="text-xs text-gray-400 mt-2 italic img-desc" data-zh="上海 · 酒店充电法" data-en="Shanghai · Hotel recharging method">上海 · 酒店充电法</p>
+                </div>
+                <div class="md:col-span-5">
+                    <img src="gaoyou2.jpg" alt="高邮余晖" class="w-full rounded-lg shadow-xs hover:opacity-95 transition-opacity">
+                    <p class="text-xs text-gray-400 mt-2 italic img-desc" data-zh="高邮 · 隔着植物看日落的颗粒感" data-en="Gaoyou · Sunset framed by leaves">高邮 · 隔着植物看日落的颗粒感</p>
+                </div>
+                <div class="md:col-span-7">
+                    <img src="shandong.jpg" alt="山东晚霞" class="w-full rounded-lg shadow-xs hover:opacity-95 transition-opacity">
+                    <p class="text-xs text-gray-400 mt-2 italic img-desc" data-zh="山东 · 黄河落日的蓝橘色调" data-en="Shandong · Blue and orange tones of the Yellow River sunset">山东 · 黄河落日的蓝橘色调</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="border-b border-gray-200 pb-2 mb-8">
+                <h3 class="text-xs uppercase tracking-widest text-[#7A5533] font-bold section-title" data-zh="具体的附近" data-en="The Tangible Nearby">具体的附近</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-5">
+                    <img src="jiaxing.jpg" alt="嘉兴风车" class="w-full rounded-lg shadow-xs hover:opacity-95 transition-opacity">
+                    <p class="text-xs text-gray-400 mt-2 italic img-desc" data-zh="嘉兴 · 高架与风车" data-en="Jiaxing · Elevated roads and wind turbines">嘉兴 · 高架与风车</p>
+                </div>
+                <div class="md:col-span-7">
+                    <img src="qingdao.jpg" alt="青岛海浪" class="w-full rounded-lg shadow-xs hover:opacity-95 transition-opacity">
+                    <p class="text-xs text-gray-400 mt-2 italic img-desc" data-zh="青岛 · 浪拍礁石" data-en="Qingdao · Waves crashing on rocks">青岛 · 浪拍礁石</p>
+                </div>
+                <div class="md:col-span-12">
+                    <img src="fuzhou.jpg" alt="福州海边" class="w-full rounded-xl shadow-xs hover:opacity-95 transition-opacity max-h-[500px] object-cover">
+                    <p class="text-xs text-gray-400 mt-2 italic img-desc" data-zh="福州 · 长乐下沙海滩" data-en="Fuzhou · Changle Xiasha Beach">福州 · 长乐下沙海滩</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="border-b border-gray-200 pb-2 mb-8">
+                <h3 class="text-xs uppercase tracking-widest text-[#7A5533] font-bold section-title" data-zh="旅途的步履" data-en="Journey & Rhythm">旅途的步履</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <img src="lhasa.jpg" alt="拉萨" class="w-full rounded-lg shadow-xs hover:opacity-95 transition-opacity">
+                    <p class="text-xs text-gray-400 mt-2 italic img-desc" data-zh="拉萨 · 公示语调研路上的清冷街景" data-en="Lhasa · Rainy street views during field research">拉萨 · 公示语调研路上的清冷街景</p>
+                </div>
+                <div>
+                    <img src="xian.jpg" alt="西安" class="w-full rounded-lg shadow-xs hover:opacity-95 transition-opacity">
+                    <p class="text-xs text-gray-400 mt-2 italic img-desc" data-zh="西安 · 赴个约，和朋友在一起的10小时" data-en="Xi'an · A 10-hour reunion with friends">西安 · 赴个约，和朋友在一起的10小时</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-100 py-8 text-center text-xs text-gray-400 tracking-wider">
+        © 2026 Lia. Visual Language & Storytelling.
+    </footer>
+
+    <script>
+       const translations = {
+            'zh-CN': {
+                back: '← 返回首页 Index',
+                title: '光影切片 · 摄影集',
+                sub: '“我还能感受，这很重要。”'
+            },
+            'en': {
+                back: '← Back to Home',
+                title: 'Visual Works · Photography',
+                sub: '"Still feeling, and this matters."'
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            const data = translations[lang];
+            if (!data) return;
+            
+            document.getElementById('back-btn').innerText = data.back;
+            document.getElementById('page-title').innerText = data.title;
+            document.getElementById('page-sub').innerText = data.sub;
+            
+            document.querySelectorAll('.section-title').forEach(el => {
+                el.innerText = el.getAttribute(`data-${lang}`);
+            });
+            
+            document.querySelectorAll('.img-desc').forEach(el => {
+                el.innerText = el.getAttribute(`data-${lang}`);
+            });
+
+            document.getElementById('lang-btn').innerText = lang === 'zh-CN' ? 'EN' : '中';
+
+            // 保存设置到本地存储
+            localStorage.setItem('portfolio_lang', lang);
+        }
+
+        function toggleLang() {
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'zh-CN' ? 'en' : 'zh-CN';
+            setLanguage(newLang);
+        }
+
+        // 页面加载完成后立即自动执行：检查本地存储的语言偏好
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('portfolio_lang') || 'zh-CN';
+            if (savedLang === 'en') {
+                setLanguage('en');
+            }
+        });
+    </script>
+</body>
+</html>
